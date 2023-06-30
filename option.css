@@ -1,0 +1,82 @@
+
+#home{
+    
+    display: flex;
+    flex-direction: column;
+    padding:3px 20px;
+    height: 220px;
+    justify-content: center;
+    align-items: center;
+
+}
+#home p{
+    font-size: 50px;
+    color:greenyellow;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('bg.jpg') no-repeat center center/cover;
+    opacity: 0.2;
+    height: 450px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+
+.box{
+    background-color: rgb(68, 0, 253);
+    width: 100%;
+    height: 500px;
+}
+
+
+.subject-link {
+    text-align: center;
+    font-size: 22px;
+}
+
+@media only screen and (max-width: 768px) {
+    #home{
+        width: 88px;
+    }
+    .subject-link {
+        font-size: 15px;
+        width: 80px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .subject-link {
+        width: 60px;
+    }
+
+}
+
+
+    /* Add the following CSS code */
+ 
+
+    @media (max-width: 767px) {
+        /* CSS for screens with a maximum width of 767px */
+    #home p {
+        text-align: center;
+            font-size: 18px;
+        }
+    }
+
+/* .footer{
+    align-items: center;
+    font-family:Montserrat;
+    font-size: 14px;
+    width: 100%;
+    height: 19px;
+    color: white;
+   background-color: rgb(54, 34, 168);
+   text-align: center;
+     font-weight:normal;
+
+} */

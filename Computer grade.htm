@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3346870224755102"
+  crossorigin="anonymous"></script>
+  <title>GPA Calculator</title>
+  <script src="Computer grade.js"></script>
+  <style>
+   *{
+    color: red;
+    background: url('lol.avif') no-repeat center center/cover;
+   }
+    
+   label {
+      font-size: 17px;
+      color: black;
+      display: inline-block;
+      width: 120px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    input[type="text"] {
+      width: 100px;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+    }
+
+    #result {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+ <center> <h1>GPA Calculator</h1></center>
+  <form>
+    <label for="english-th">English (Theory):</label>
+    <input type="text" pattern="^[0-4](\.[0-9]{1,2})?$" id="english-th" required>
+    <label for="english-pr">English (Practical):</label>
+    <input type="text" pattern="^[0-4](\.[0-9]{1,2})?$" id="english-pr" required><br>
+
+    <label for="nepali-th">Nepali (Theory):</label>
+    <input type="text" pattern="^[0-4](\.[0-9]{1,2})?$" id="nepali-th" required>
+    <label for="nepali-pr">Nepali (Practical):</label>
+    <input type="text" pattern="^[0-4](\.[0-9]{1,2})?$" id="nepali-pr" required><br>
+
+    <label for="math-th">Math (Theory):</label>
+    <input type="text" pattern="^[0-4](\.[0-9]{1,2})?$" id="math-th" required>
+    <label for="math-pr">Math (Practical):</label>
+    <input type="text" pattern="^[0-4](\.[0-9]{1,2})?$" id="math-pr" required><br>
+
+    <label for="physics-th">Physics (Theory):</label>
+    <input type="text" pattern="^[0-4](\.[0-9]{1,2})?$" id="physics-th" required>
+    <label for="physics-pr">Physics (Practical):</label>
+    <input type="text" pattern="^[0-4](\.[0-9]{1,2})?$" id="physics-pr" required><br>
+
+    <label for="chemistry-th">Chemistry (Theory):</label>
+    <input type="text" pattern="^[0-4](\.[0-9]{1,2})?$" id="chemistry-th" required>
+    <label for="chemistry-pr">Chemistry (Practical):</label>
+    <input type="text" pattern="^[0-4](\.[0-9]{1,2})?$" id="chemistry-pr" required><br>
+
+    <label for="computer-th">Computer (Theory):</label>
+    <input type="text" pattern="^[0-4](\.[0-9]{1,2})?$" id="computer-th" required>
+    <label for="computer-pr">Computer (Practical):</label>
+    <input type="text" pattern="^[0-4](\.[0-9]{1,2})?$" id="computer-pr" required><br>
+
+    <button type="button" onclick="calculateGPA()">Calculate GPA</button>
+  </form>
+
+  <h2 id="result"></h2>
+  <marquee><h2>If Your Theory Grade Is below 1.6 That mean NG(NON GRADE)</h2></marquee>
+<hr>
+<hr>
+  <style>
+    /* CSS for the table */
+    .grade-table {
+      border: 3px solid black;
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    
+    .grade-table th, .grade-table td {
+      
+      padding: 8px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+    
+    .grade-table th {
+      text-align: center;
+      border: 3px solid green;
+      background-color: #84f700;
+    }
+    .grade-table td{
+      text-align: center;
+      border: 2px solid rgb(89, 0, 255);
+      color:rgb(248, 28, 175);
+    }
+    .grade-table tr{
+      
+        font-size: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-style: italic;
+    }
+        
+.footer{
+    align-items: center;
+    font-family:Montserrat;
+    font-size: 14px;
+    width: 100%;
+    height: 19px;
+    color: white;
+   background-color: rgb(47, 31, 139);
+   border: 1px solid blue;
+   text-align: center;
+     font-weight:normal;
+
+}
+    
+    /* CSS for responsiveness */
+    @media screen and (max-width: 600px) {
+      .grade-table {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Grade Point Scale</h1>
+  
+  <table class="grade-table">
+    <thead>
+      <tr>
+        <th>Grade</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>A+ &nbsp;&nbsp;&nbsp;&nbsp; (4.0)</td>
+        <td>(Outstanding)</td>
+      </tr>
+      <tr>
+        <td>A  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3.6)</td>
+        <td>(Excellent)</td>
+      </tr>
+      <tr>
+        <td>B+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3.2)</td>
+        <td>(Very good)</td>
+      </tr>
+      <tr>
+        <td>B &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2.8)</td>
+        <td>(Good)</td>
+      </tr>
+      <tr>
+        <td>C+&nbsp;&nbsp;&nbsp;&nbsp; (2.4)</td>
+        <td>(Satisfactory)</td>
+      </tr>
+      <tr>
+        <td>C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2.0)</td>
+        <td>(Acceptable)</td>
+      </tr>
+      <tr>
+        <td>D &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( 1.6)</td>
+        <td>(Basic)</td>
+      </tr>
+      <tr bgcolor="red">
+        <td >NG  &nbsp;&nbsp;&nbsp;&nbsp;below 1.6</td>
+        <td>(Not Graded)</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="footer">
+    <footer>&copy; Mahesh Kshetri Khatri</footer></div>
+</body>
+</html>
